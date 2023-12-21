@@ -1,0 +1,257 @@
+import java.util.Scanner;
+
+/**
+
+* ArnesKapic - akapic3
+
+* CIS171 22149
+
+* Feb 10, 2023
+
+*/
+
+public class RockPaperScissors {
+
+public static String findWinner(String s1, String s2) {
+
+String win = "";
+
+//switching string 1
+
+switch (s1) {
+
+case "rock":
+
+//nesting switch of string 2 in string 1
+
+switch (s2) {
+
+case "rock":
+
+win = "Draw";
+
+break;
+
+case "scissors":
+
+win = "1";
+
+break;
+
+case "paper":
+
+win = "2";
+
+break;
+
+case "spock":
+
+win = "2";
+
+break;
+
+case "lizard":
+
+win = "1";
+
+break;
+
+}
+
+break;
+
+case "scissors":
+
+//nesting switch of s2 in s1
+
+switch (s2) {
+
+case "rock":
+
+win = "2";
+
+break;
+
+case "scissors":
+
+win = "Draw";
+
+break;
+
+case "paper":
+
+win = "1";
+
+break;
+
+case "spock":
+
+win = "2";
+
+break;
+
+case "lizard":
+
+win = "1";
+
+break;
+
+}
+
+break;
+
+case "paper":
+
+//nesting switch of s2 in s1
+
+switch (s2) {
+
+case "rock":
+
+win = "1";
+
+break;
+
+case "scissors":
+
+win = "2";
+
+break;
+
+case "paper":
+
+win = "Draw";
+
+break;
+
+case "spock":
+
+win = "1";
+
+break;
+
+case "lizard":
+
+win = "2";
+
+break;
+
+}
+
+break;
+
+case "spock":
+
+//nesting switch of s2 in s1
+
+switch (s2) {
+
+case "rock":
+
+win = "1";
+
+break;
+
+case "scissors":
+
+win = "1";
+
+break;
+
+case "paper":
+
+win = "2";
+
+break;
+
+case "spock":
+
+win = "Draw";
+
+break;
+
+case "lizard":
+
+win = "2";
+
+break;
+
+}
+
+break;
+
+case "lizard":
+
+//nesting switch of s2 in s1
+
+switch (s2) {
+
+case "rock":
+
+win = "2";
+
+break;
+
+case "scissors":
+
+win = "2";
+
+break;
+
+case "paper":
+
+win = "1";
+
+break;
+
+case "spock":
+
+win = "1";
+
+break;
+
+case "lizard":
+
+win = "Draw";
+
+break;
+
+}
+
+break;
+
+}
+
+return ("Player " + win + " wins!");
+
+}
+
+public static void main(String[] args) {
+
+String s1, s2;
+
+String win = "";
+
+Scanner scan = new Scanner(System.in);
+
+System.out.print("Enter Player 1 Selection (rock, paper, scissors, lizard or spock):");
+
+s1 = scan.next();
+
+System.out.print("Enter Player 2 Selection (rock, paper, scissors, lizard or spock):");
+
+s2 = scan.next();
+
+System.out.println(findWinner(s1.toLowerCase(), s2.toLowerCase()));
+
+}
+
+public static Object rps(String string, String string2) {
+
+// TODO Auto-generated method stub
+
+return null;
+
+}
+
+}
